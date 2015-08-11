@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var txfTipoVideo: UITextField!
     @IBOutlet weak var txfTipoAudio: UITextField!
     
+    @IBOutlet weak var testeBolo: UIImageView!
     
     var exercicio: Exercicio!
     
@@ -51,6 +52,8 @@ class ViewController: UIViewController {
         exercicio = ExercicioManager.sharedInstance.buscaExercicio(0)
         
         println("\(exercicio)")
+        
+        
     }
     
     func playMovie(var nomeVideo: String, var tipo: String){
@@ -77,6 +80,26 @@ class ViewController: UIViewController {
         self.audio.prepareToPlay()
         self.audio.play()
         println("TOCANDOOO")
+    }
+
+    
+    
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        
+        var touch = touches.first as! UITouch
+        let point = touch.locationInView(view)
+        
+        for views in self.view.subviews {
+            let viewsFrame = self.view.convertRect(views.frame, toView: views.superview)
+            if (CGRectContainsPoint(viewsFrame, point)) {
+                if views.tag == 2 {
+                    testeBolo.backgroundColor = UIColor.redColor()
+                }
+            }
+        }
+        
+        
     }
 }
 
