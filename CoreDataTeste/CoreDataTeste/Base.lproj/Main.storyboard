@@ -76,13 +76,43 @@
                                     <rect key="frame" x="455" y="295" width="136" height="30"/>
                                 </variation>
                             </textField>
-                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quadM" translatesAutoresizingMaskIntoConstraints="NO" id="Tif-Sn-9gJ">
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quadM" translatesAutoresizingMaskIntoConstraints="NO" id="Tif-Sn-9gJ">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="tintColor" red="0.77021352440000002" green="0.25023362090000001" blue="0.025434061220000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="148" y="601" width="240" height="128"/>
                                 </variation>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roxo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7f3-l1-UVn">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <color key="backgroundColor" red="0.7198999411" green="0.42052264499999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="574" y="538" width="57" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laranja" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9A4-Az-MPv">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.33279041809999999" blue="0.13777838789999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="574" y="590" width="57" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Azul" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afq-rL-NuY">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="574" y="630" width="57" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -95,6 +125,9 @@
                                 <exclude reference="ioq-Le-akX"/>
                                 <exclude reference="rAT-t7-qea"/>
                                 <exclude reference="Tif-Sn-9gJ"/>
+                                <exclude reference="7f3-l1-UVn"/>
+                                <exclude reference="9A4-Az-MPv"/>
+                                <exclude reference="afq-rL-NuY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -111,10 +144,16 @@
                                 <include reference="ioq-Le-akX"/>
                                 <include reference="rAT-t7-qea"/>
                                 <include reference="Tif-Sn-9gJ"/>
+                                <include reference="7f3-l1-UVn"/>
+                                <include reference="9A4-Az-MPv"/>
+                                <include reference="afq-rL-NuY"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="corAzul" destination="afq-rL-NuY" id="8pa-3E-ft2"/>
+                        <outlet property="corLaranja" destination="9A4-Az-MPv" id="aTh-ye-yjT"/>
+                        <outlet property="corRoxo" destination="7f3-l1-UVn" id="bgl-jM-DAx"/>
                         <outlet property="testeBolo" destination="Tif-Sn-9gJ" id="jAb-90-WAH"/>
                         <outlet property="txfAudio" destination="Vxh-zj-HGo" id="uCa-6n-paT"/>
                         <outlet property="txfNome" destination="cwF-fe-izO" id="HPn-lP-kxb"/>

@@ -22,6 +22,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var testeBolo: UIImageView!
     
+    @IBOutlet weak var corRoxo: UILabel!
+    @IBOutlet weak var corLaranja: UILabel!
+    @IBOutlet weak var corAzul: UILabel!
+    
     var exercicio: Exercicio!
     
     var movie: MPMoviePlayerController?
@@ -74,6 +78,7 @@ class ViewController: UIViewController {
     }
     
     func playAudio(var nomeAudio: String, var tipo: String){
+        
         let path = NSBundle.mainBundle().pathForResource(nomeAudio, ofType: tipo)
         let file = NSURL(fileURLWithPath: path!)
         self.audio = AVAudioPlayer(contentsOfURL: file, error: nil)
@@ -82,9 +87,6 @@ class ViewController: UIViewController {
         println("TOCANDOOO")
     }
 
-    
-    
-    
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         
         var touch = touches.first as! UITouch
@@ -93,13 +95,18 @@ class ViewController: UIViewController {
         for views in self.view.subviews {
             let viewsFrame = self.view.convertRect(views.frame, toView: views.superview)
             if (CGRectContainsPoint(viewsFrame, point)) {
-                if views.tag == 2 {
-                    testeBolo.backgroundColor = UIColor.redColor()
-                }
+                switch views.tag {
+                case 2:
+                    testeBolo.backgroundColor = UIColor.purpleColor()
+                case 3:
+                    testeBolo.backgroundColor = UIColor.orangeColor()
+                case 4:
+                    testeBolo.backgroundColor = UIColor.blueColor()
+                default:
+                    println("nada")
+                }                
             }
         }
-        
-        
     }
 }
 
